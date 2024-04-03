@@ -1,0 +1,50 @@
+FROM php:8.2-apache
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    libapache2-mod-php \
+    php-mysql \
+    php-mbstring \
+    php-xml \
+    php-zip \
+    php-curl \
+    phpmyadmin \
+    awscli \
+    && rm -rf /var/lib/apt/lists/*
+
+# Enable required Apache modules
+RUN a2enmod rewrite
+RUN a2enmod ssl
+RUN a2enmod proxy
+RUN a2enmod proxy_http
+
+# Create directories for virtual hosts
+RUN mkdir -p /var/www/uepaki.com/public_html
+RUN mkdir -p /var/www/seller.uepaki.com/public_html
+RUN mkdir -p /var/www/hr.uepaki.com/public_html
+
+# Copy index.html files to the document roots
+COPY index.html /var/www/uepaki.com/public_html/index.html
+COPY index.html /var/www/seller.uepaki.com/public_html/index.html
+COPY index.html /var/www/hr.uepaki.com/public_html/index.html
+
+# Configure Apache virtual hosts
+COPY apache-configs/www.uepaki.com.conf /etc/apache2/sites-available/www.uepaki.com.conf
+COPY apache-configs/seller.uepaki.com.conf /etc/apache2/sites-available/seller.uepaki.com.conf
+COPY apache-configs/hr.uepaki.com.conf /etc/apache2/sites-available/hr.uepaki.com.conf
+
+# Enable virtual hosts
+RUN a2ensite www.uepaki.com.conf
+RUN a2ensite seller.uepaki.com.conf
+RUN a2ensite hr.uepaki.com.conf
+
+# Update Apache configuration to use SSL certificate (replace placeholders with actual paths)
+COPY ssl-certificates/www.uepaki.com.crt /etc/ssl/certs/www.uepaki.com.crt
+COPY ssl-certificates/www.uepaki.com.key /etc/ssl/private/www.uepaki.com.key
+COPY ssl-certificates/seller.uepaki.com.crt /etc/ssl/certs/seller.uepaki.com.crt
+COPY ssl-certificates/seller.uepaki.com.key /etc/ssl/private/seller.uepaki.com.key
+COPY ssl-certificates/hr.uepaki.com.crt /etc/ssl/certs/hr.uepaki.com.crt
+COPY ssl-certificates/hr.uepaki.com.key /etc/ssl/private/hr.uepaki.com.key
+
+# Start Apache server
+CMD ["apache2-foreground"]
