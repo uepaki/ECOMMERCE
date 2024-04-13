@@ -1,0 +1,51 @@
+# web-deployment.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-deployment
+  labels:
+    app: web
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+      - name: web
+        image: uepakites/my-laravel-web-server:latest
+        ports:
+        - containerPort: 80
+      nodeSelector:
+        node-type: web-node
+---
+# database-deployment.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: database-deployment
+  labels:
+    app: database
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: database
+  template:
+    metadata:
+      labels:
+        app: database
+    spec:
+      containers:
+      - name: database
+        image: uepakites/my-mysql-database-server:latest
+        ports:
+        - containerPort: 3306
+      nodeSelector:
+        node-type: database-node
