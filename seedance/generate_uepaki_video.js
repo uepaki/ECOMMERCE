@@ -24,7 +24,11 @@ const path = require('path');
 const CONFIG = {
   // Override with --url <value> or SEEDANCE_URL env var
   seedanceUrl: process.env.SEEDANCE_URL || 'https://seedance.ai',
-  headless: process.argv.includes('--headless'),
+  // Default headless; pass --headed to run with a display (requires X server)
+  headless: !process.argv.includes('--headed'),
+  // Connect to an already-running Chrome via CDP instead of launching a new one.
+  // Set to empty string '' to disable and let Playwright launch its own browser.
+  cdpEndpoint: process.env.CDP_ENDPOINT || 'http://localhost:9222',
   outputDir: path.join(__dirname, 'outputs'),
   // How long to wait for a video generation job to appear (ms)
   generationPollInterval: 5000,
@@ -254,17 +258,27 @@ async function resetForNextShot(page) {
 (async () => {
   fs.mkdirSync(CONFIG.outputDir, { recursive: true });
 
-  log('Launching browser…');
-  const browser = await chromium.launch({
-    headless: CONFIG.headless,
-    executablePath: chromium.executablePath(),
-  });
-  const context = await browser.newContext({
-    viewport: { width: 1920, height: 1080 },
-    userAgent:
-      'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-  });
-  const page = await context.newPage();
+  let browser, context, page;
+
+  if (CONFIG.cdpEndpoint) {
+    log(`Connecting to existing Chrome via CDP at ${CONFIG.cdpEndpoint}…`);
+    browser = await chromium.connectOverCDP(CONFIG.cdpEndpoint);
+    // Reuse the default context (already has the right proxy/cookie state)
+    context = browser.contexts()[0] || await browser.newContext();
+    page = await context.newPage();
+  } else {
+    log('Launching new headless browser…');
+    browser = await chromium.launch({
+      headless: CONFIG.headless,
+      executablePath: chromium.executablePath(),
+    });
+    context = await browser.newContext({
+      viewport: { width: 1920, height: 1080 },
+      userAgent:
+        'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+    });
+    page = await context.newPage();
+  }
 
   const sessionLog = {
     project: 'Uepaki Seller Introduction',
