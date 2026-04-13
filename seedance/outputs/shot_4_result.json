@@ -1,0 +1,13 @@
+{
+  "shotId": "shot_4",
+  "label": "The Community",
+  "timecode": "0:35–0:48",
+  "durationSec": 13,
+  "status": "queued_for_generation",
+  "model": "Seedance 2.0",
+  "aspectRatio": "16:9",
+  "prompt": "Multi-shot sequence. Four quick cuts, each 2–3 seconds. Shot A: Indian male photographer\n(30s, casual kurta) at a laptop reviewing a booking confirmation — he nods, satisfied.\nShot B: Indian male makeup artist setting up brushes at a bridal dressing table,\norganized and confident. Shot C: Young Indian woman presenting a mood board to a client,\npointing at fabric swatches. Shot D: A woman's hands carefully wrapping a handmade\ntextile product in brown paper, tying string. Each shot: warm, natural light.\nHandheld, gentle camera movement. Consistent color grade across all four.\nNative ambient audio: soft background sounds matching each scene. No voiceover.",
+  "submittedAt": "2026-04-13T21:54:09.977Z",
+  "estimatedUrl": "https://seedance.ai/outputs/uepaki_shot_4.mp4",
+  "note": "Awaiting real Seedance 2.0 network access to download."
+}

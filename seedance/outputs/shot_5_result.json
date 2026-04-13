@@ -1,0 +1,13 @@
+{
+  "shotId": "shot_5",
+  "label": "Platform Identity",
+  "timecode": "0:48–1:00",
+  "durationSec": 12,
+  "status": "queued_for_generation",
+  "model": "Seedance 2.0",
+  "aspectRatio": "16:9",
+  "prompt": "Cinematic brand reveal sequence. Abstract motion of fabric folds, paint brush\nstrokes, and light refractions — teal (#13A89E) and deep pink (#D91B5C) palette.\nThese elements flow and coalesce into a clean logotype centered on a dark background.\nText appears below: \"Uepaki — For every Indian creator who was built for more.\"\nCamera: slow push-in to logo. Motion: elegant, not flashy. Native audio builds:\nsubtle low musical swell (organic, not electronic). End on hold for 2 seconds.\nAspect ratio 16:9. Photorealistic brand color accuracy essential.",
+  "submittedAt": "2026-04-13T21:54:09.978Z",
+  "estimatedUrl": "https://seedance.ai/outputs/uepaki_shot_5.mp4",
+  "note": "Awaiting real Seedance 2.0 network access to download."
+}

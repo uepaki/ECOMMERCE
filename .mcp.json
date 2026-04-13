@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp",
+        "--browser", "chromium",
+        "--viewport-size", "1920x1080",
+        "--output-dir", "./seedance/outputs",
+        "--timeout-action", "10000",
+        "--timeout-navigation", "90000",
+        "--caps", "vision"
+      ]
+    }
+  }
+}

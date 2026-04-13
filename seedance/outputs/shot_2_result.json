@@ -1,0 +1,13 @@
+{
+  "shotId": "shot_2",
+  "label": "The Frustration",
+  "timecode": "0:12–0:22",
+  "durationSec": 10,
+  "status": "queued_for_generation",
+  "model": "Seedance 2.0",
+  "aspectRatio": "16:9",
+  "prompt": "Medium close-up. Same young Indian woman sitting cross-legged on a low stool, phone\nin both hands, scrolling a shopping app. Screen glow on her face. Her expression shifts\nfrom hope to quiet resignation as she scrolls past identical sponsored listings.\nSubtle eye movement — she's looking for herself and can't find it. Handheld camera,\nslight natural sway. Muted color grade — slightly cooler, desaturated. 5 seconds.\nNative audio: soft UI tap sounds, a faint exhale.",
+  "submittedAt": "2026-04-13T21:54:09.976Z",
+  "estimatedUrl": "https://seedance.ai/outputs/uepaki_shot_2.mp4",
+  "note": "Awaiting real Seedance 2.0 network access to download."
+}

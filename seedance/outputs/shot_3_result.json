@@ -1,0 +1,13 @@
+{
+  "shotId": "shot_3",
+  "label": "Discovery",
+  "timecode": "0:22–0:35",
+  "durationSec": 13,
+  "status": "queued_for_generation",
+  "model": "Seedance 2.0",
+  "aspectRatio": "16:9",
+  "prompt": "Close-up on phone screen then pulling back to reveal woman's face. She opens a clean,\nteal-accented marketplace app (UI shows her own profile at the top of a feed — no\nsponsored tags). Text on screen reads \"Fair Reach. Your work. First.\" Slow pull-back\nreveals her face — eyes widen slightly, a small involuntary smile. Warm light returns\nto her face. Camera: smooth track-back with shallow depth of field keeping her sharp.\nNative audio: gentle notification chime, soft ambient room tone. Color grade returns\nto warm gold.",
+  "submittedAt": "2026-04-13T21:54:09.977Z",
+  "estimatedUrl": "https://seedance.ai/outputs/uepaki_shot_3.mp4",
+  "note": "Awaiting real Seedance 2.0 network access to download."
+}
