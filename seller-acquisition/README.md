@@ -48,3 +48,16 @@ No one has been contacted. Messages contain `[VARIABLES]` and the `[FP-OUT SENTE
 | `UEPAKI_SELLER_REFERRAL_FRAMEWORK.md` | Unpaid, consent-based peer introductions (referral launch deferred) |
 | `UEPAKI_CONVERSION_KPI_FRAMEWORK.md` | Conversion definitions and diagnostic test thresholds |
 | `UEPAKI_WHO_HAS_JOINED_RESPONSE_FRAMEWORK.md` | Truthful answer ladder and publication rules |
+
+## Red team & final launch plan (`launch/`) — OPERATIVE
+
+**Verdict: AMBER.** Start the Wave −1 journey test once G6 (the Refer & Earn redirect) is closed. No cold outreach until G1–G4, G7 and G13 are closed. See `BLOCKERS` in the Command Center.
+
+| File | Purpose |
+|---|---|
+| `UEPAKI_SELLER_ACQUISITION_MASTER_LAUNCH_PLAYBOOK.pdf` | The one operating plan: gates, Golden 300 v2, channels and rewritten messages, onboarding, founding offer, 30/60/90 days, budget, rules |
+| `UEPAKI_SELLER_ACQUISITION_RED_TEAM_AUDIT.pdf` | Independent findings (strategy, database, messages, conversion, operations) and blockers |
+| `UEPAKI_SELLER_ACQUISITION_COMMAND_CENTER.xlsx` | Single tracker: prospects (Golden 300 v2 pre-filled), campaign dashboard, KPI funnel, weekly cohorts, blockers, budget |
+| `UEPAKI_FINAL_SELLER_ACQUISITION_CHECKLIST.md` | Step-by-step gates and run checklist |
+
+The red team supersedes for day-to-day use: the v1 First 25/100/300 lists (replaced by Golden 300 v2), the v1 first messages (replaced by the rewrites), and the earlier trackers (replaced by the Command Center). Legacy seller accounts (registered 3–5 years ago, none active) are excluded from counts and founding seats.
