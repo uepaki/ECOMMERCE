@@ -35,3 +35,16 @@ Before Wave 0: founder decision **FP-OUT** (founding-programme wording for 1:1 o
 | `UEPAKI_DO_NOT_SAY.md` | One-page prohibited-language list |
 
 No one has been contacted. Messages contain `[VARIABLES]` and the `[FP-OUT SENTENCE]` placeholder; founder sign-off is required before first use.
+
+## Seller conversion, objection & founding professional system (`conversion/`)
+
+| File | Purpose |
+|---|---|
+| `UEPAKI_SELLER_CONVERSION_PLAYBOOK.pdf` | Main document: conversion journey, drop-off points, interim information note, summaries, decisions needed, final audit |
+| `UEPAKI_SELLER_OBJECTION_PLAYBOOK.docx` | 17 objections — short/long response, what not to say, CTA, basis |
+| `UEPAKI_FOUNDING_PROFESSIONAL_PROGRAMME.docx` | Programme design: decided vs proposed vs open |
+| `UEPAKI_PROFESSIONAL_ONBOARDING_PLAYBOOK.docx` | Readiness check, checklists, 48/72-hour sequence, escalation |
+| `UEPAKI_SELLER_ACTIVATION_CHECKLIST.xlsx` | Per-professional tracker with automatic activation flag, stage, alerts and KPIs |
+| `UEPAKI_SELLER_REFERRAL_FRAMEWORK.md` | Unpaid, consent-based peer introductions (referral launch deferred) |
+| `UEPAKI_CONVERSION_KPI_FRAMEWORK.md` | Conversion definitions and diagnostic test thresholds |
+| `UEPAKI_WHO_HAS_JOINED_RESPONSE_FRAMEWORK.md` | Truthful answer ladder and publication rules |
