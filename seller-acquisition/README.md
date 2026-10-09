@@ -59,5 +59,6 @@ No one has been contacted. Messages contain `[VARIABLES]` and the `[FP-OUT SENTE
 | `UEPAKI_SELLER_ACQUISITION_RED_TEAM_AUDIT.pdf` | Independent findings (strategy, database, messages, conversion, operations) and blockers |
 | `UEPAKI_SELLER_ACQUISITION_COMMAND_CENTER.xlsx` | Single tracker: prospects (Golden 300 v2 pre-filled), campaign dashboard, KPI funnel, weekly cohorts, blockers, budget |
 | `UEPAKI_FINAL_SELLER_ACQUISITION_CHECKLIST.md` | Step-by-step gates and run checklist |
+| `UEPAKI_GOLDEN_300_V2.xlsx` | Standalone export of the corrected Golden 300 v2 (same list as Command Center PROSPECTS) |
 
 The red team supersedes for day-to-day use: the v1 First 25/100/300 lists (replaced by Golden 300 v2), the v1 first messages (replaced by the rewrites), and the earlier trackers (replaced by the Command Center). Legacy seller accounts (registered 3–5 years ago, none active) are excluded from counts and founding seats.
